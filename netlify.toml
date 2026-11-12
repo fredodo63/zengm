@@ -1,9 +1,11 @@
 [build]
-  command = "SPORT=basketball npm run build"
+  command = "SPORT=basketball pnpm run build"
   publish = "build"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "24"
+  PNPM_VERSION = "12"
+  NODE_OPTIONS = "--max-old-space-size=4096"
 
 [[redirects]]
   from = "/*"
